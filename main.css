@@ -1,50 +1,157 @@
-:root {
-    --green: #00FF00;
-    --white: #FFFFFF;
-    --black: #000000;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
-
-
 
 body {
-    position: relative;
-    left: 20px;
-    top: 0px;
-    background: var(--bg);
-    color: var(--fontcolor);
-    font-family: monospace; 
+    min-height: 100vh;
+    background:linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
 }
 
-li {
-    list-style: circle;
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0; 
 }
 
-.list {
-    list-style: square;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.light-theme {
-    --bg: var(--white);
-    --fontcolor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
 }
 
-.dark-theme {
-    --bg: var(--black);
-    --fontcolor: var(--green);
-    --btnBg: var(--white);
-    --btnFontColor: var(--black);
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
 }
 
-.btn {
-    position: absolute;
-    top: 20px;
-    left: 450px;
-    height: 30px;
-    width: 70px;
-    border-radius: 20%;
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    flex: 1;
+    padding: 12px;
     border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
+    border-radius: 10px;
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+.list-item{
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: #ef4444;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
 }

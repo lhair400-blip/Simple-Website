@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Website</title>
-     <link rel="stylesheet" href="main.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Website</title>
+    <link rel="stylesheet" href="main.css">
 </head>
- <body class="light-theme">
-     <h1>To do list List :0</h1>
-     <p id= "msg">Current tasks:</p>
-     <ul>
-         <li class="list">Add basic text</li>
-         <li class="list">Add light and dark themes</li>
-         <li class="list"> Enable the ability to switch the theme</li>
-     </ul>
-     <dic>
-        <button class="btn">Dark mode</button>
-     </dic>
-     <script src="app.js"></script>
-     <noscript>You need to enable JavaScript to view the full site</noscript>
- </body>
+</html>
+
+
+<nav class = "navbar">
+    <div class = "logo">Tracking Website</div>
+
+    <ul class = "nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="goals.html">Goals</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="card hero">
+        <h1> Tracking Site </h1>
+        <p> Use this to track tasks, create notes, and set goals</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h2>Tasks</h2>
+            <p>Track any type of tasks</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>Notes</h2>
+            <p>Write down any notes for future reference</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>Goals</h2>
+            <p>Set long and short term goals</p>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
 </html>
